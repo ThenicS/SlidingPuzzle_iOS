@@ -11,7 +11,7 @@ import SwiftUI
 struct SlidingPuzzle_iOsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppModeView()
         }
     }
 }

@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		65901EC02F752670006B70B9 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 65901EBF2F752670006B70B9 /* Factory */; };
+		65901EC22F752670006B70B9 /* FactoryKit in Frameworks */ = {isa = PBXBuildFile; productRef = 65901EC12F752670006B70B9 /* FactoryKit */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		656266002F751BC7001E341F /* SlidingPuzzle_iOs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlidingPuzzle_iOs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +28,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65901EC22F752670006B70B9 /* FactoryKit in Frameworks */,
+				65901EC02F752670006B70B9 /* Factory in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +72,8 @@
 			);
 			name = SlidingPuzzle_iOs;
 			packageProductDependencies = (
+				65901EBF2F752670006B70B9 /* Factory */,
+				65901EC12F752670006B70B9 /* FactoryKit */,
 			);
 			productName = SlidingPuzzle_iOs;
 			productReference = 656266002F751BC7001E341F /* SlidingPuzzle_iOs.app */;
@@ -94,6 +103,9 @@
 			);
 			mainGroup = 656265F72F751BC7001E341F;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				65901EBE2F752670006B70B9 /* XCRemoteSwiftPackageReference "Factory" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 656266012F751BC7001E341F /* Products */;
 			projectDirPath = "";
@@ -332,6 +344,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		65901EBE2F752670006B70B9 /* XCRemoteSwiftPackageReference "Factory" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Factory.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		65901EBF2F752670006B70B9 /* Factory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 65901EBE2F752670006B70B9 /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = Factory;
+		};
+		65901EC12F752670006B70B9 /* FactoryKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 65901EBE2F752670006B70B9 /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = FactoryKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 656265F82F751BC7001E341F /* Project object */;
 }
