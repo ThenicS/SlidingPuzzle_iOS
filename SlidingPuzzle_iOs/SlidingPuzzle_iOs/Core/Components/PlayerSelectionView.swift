@@ -55,7 +55,15 @@ private extension PlayerSelectionView {
   func characterImageView(profile: PlayerProfile) -> some View {
     Image(profile.image)
       .resizable()
-      .frame(width: 60, height: 60)
+      .scaledToFit()
+      .padding(8)
+      .background(Color(.systemGray6))
+      .cornerRadius(.overall)
+      .overlay(
+        RoundedRectangle(cornerRadius: AppCornerRadius.overall.value)
+          .stroke(Color.appTheme.accent, lineWidth: 1)
+      )
+      .frame(width: 90, height: 90)
   }
   
   //$$ boardTypeView Section $$//
@@ -73,7 +81,7 @@ private extension PlayerSelectionView {
   func boardTypeImageArrowSwitcher(profile: Binding<PlayerProfile>) -> some View {
     Image(systemName: "arrowtriangle.up.fill")
       .font(.title2)
-      .foregroundStyle(Color.appTheme.accent)
+      .foregroundStyle(Color.appTheme.alternateAccent)
       .button(.press) {
         withAnimation(.easeInOut) {
           switchBoardImage(profile: profile)
@@ -84,7 +92,15 @@ private extension PlayerSelectionView {
   func boardPreviewImageView(profile: PlayerProfile) -> some View {
     Image(profile.preferredBoardType.previewImage)
       .resizable()
-      .frame(width: 60, height: 60)
+      .scaledToFit()
+      .padding(8)
+      .background(Color(.systemGray6))
+      .cornerRadius(.overall)
+      .overlay(
+        RoundedRectangle(cornerRadius: AppCornerRadius.overall.value)
+          .stroke(Color.appTheme.alternateAccent, lineWidth: 1)
+      )
+      .frame(width: 90, height: 90)
   }
   
   func boardDescription(profile: PlayerProfile) -> some View {
